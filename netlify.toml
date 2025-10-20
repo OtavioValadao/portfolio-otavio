@@ -1,0 +1,13 @@
+[build]
+command = "npm run build"
+publish = "dist/portfolio-otavio/browser"
+functions = "dist/portfolio-otavio/server"
+
+[build.environment]
+NODE_VERSION = "20"
+NPM_VERSION = "10"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
