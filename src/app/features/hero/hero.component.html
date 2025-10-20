@@ -1,0 +1,90 @@
+<section class="min-h-screen bg-gradient-to-br from-primary-900 dark:from-gray-900 via-primary-800 dark:via-gray-800 to-gray-900 dark:to-black flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 overflow-hidden relative transition-colors duration-300">
+  <!-- Elementos decorativos de fundo -->
+  <div class="absolute top-10 right-10 w-72 h-72 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse-soft"></div>
+  <div class="absolute bottom-10 left-10 w-72 h-72 bg-primary-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10" style="animation: pulseSoft 2s ease-in-out 2s infinite;"></div>
+
+  <div class="max-w-6xl mx-auto w-full relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <!-- Coluna Esquerda - Conteúdo -->
+      <div class="animate-slide-down">
+        <div class="inline-block mb-4">
+          <span class="px-4 py-2 bg-primary-500/20 text-primary-100 text-sm font-medium rounded-full border border-primary-400/30">
+            🚀 Bem-vindo
+          </span>
+        </div>
+
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+          {{ profileInfo.headline.split(' | ')[0] }}
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-primary-400">
+            Backend
+          </span>
+        </h1>
+
+        <p class="text-xl text-gray-300 mb-6 leading-relaxed">
+          {{ profileInfo.bio }}
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4 mb-12">
+          <button (click)="scrollToSection('projects')" class="px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+            📦 Ver Projetos
+          </button>
+          <button (click)="scrollToSection('contact')" class="px-8 py-4 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+            📧 Entrar em Contato
+          </button>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex gap-6">
+          <a *ngFor="let link of socialLinks" [href]="link.url" target="_blank" rel="noopener" 
+             class="text-gray-300 hover:text-primary-300 transition-colors duration-300 text-2xl"
+             [title]="link.label">
+            <i [class]="'bi ' + link.icon"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Coluna Direita - Imagem/Avatar -->
+      <div class="flex justify-center animate-slide-up">
+        <div class="relative">
+          <!-- Glow background -->
+          <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-400 rounded-2xl blur-2xl opacity-30 animate-pulse"></div>
+          
+          <!-- Avatar container -->
+          <div class="relative bg-gradient-to-br from-primary-600 to-primary-900 rounded-2xl p-1 shadow-elevated">
+            <div class="bg-gray-900 rounded-2xl p-8 w-full max-w-sm h-96 flex items-center justify-center">
+              <!-- Placeholder avatar -->
+              <div class="text-center">
+                <div class="w-32 h-32 mx-auto mb-4 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center shadow-lg">
+                  <span class="text-6xl">💻</span>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">{{ profileInfo.name }}</h3>
+                <p class="text-primary-300 font-medium">{{ profileInfo.title }}</p>
+                <div class="mt-6 pt-6 border-t border-gray-700">
+                  <p class="text-gray-400 text-sm">6 anos de experiência</p>
+                  <p class="text-gray-400 text-sm">Belo Horizonte, MG</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-20 pt-20 border-t border-gray-700">
+      <div class="text-center animate-scale-in" style="animation-delay: 0.1s">
+        <h4 class="text-4xl font-bold text-primary-400 mb-2">6+</h4>
+        <p class="text-gray-400">Anos de Experiência</p>
+      </div>
+      <div class="text-center animate-scale-in" style="animation-delay: 0.2s">
+        <h4 class="text-4xl font-bold text-primary-400 mb-2">10+</h4>
+        <p class="text-gray-400">Tecnologias Dominadas</p>
+      </div>
+      <div class="text-center animate-scale-in" style="animation-delay: 0.3s">
+        <h4 class="text-4xl font-bold text-primary-400 mb-2">∞</h4>
+        <p class="text-gray-400">Crescimento Contínuo</p>
+      </div>
+    </div>
+  </div>
+</section>

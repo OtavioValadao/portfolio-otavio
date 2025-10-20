@@ -1,0 +1,82 @@
+<section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors duration-300">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="mb-16 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Projetos Destacados</h2>
+      <div class="w-20 h-1 bg-gradient-to-r from-primary-600 to-primary-400 mx-auto rounded"></div>
+      <p class="text-gray-600 mt-6 text-lg">Soluções escaláveis em fintech e arquitetura em nuvem</p>
+    </div>
+
+    <!-- Grid de Projetos -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let project of projects; let i = index" 
+           class="group relative bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+           style="animation-delay: {{ i * 0.1 }}s">
+        
+        <!-- Background Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-600/10 to-primary-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+        <!-- Content -->
+        <div class="relative p-8 h-full flex flex-col">
+          <!-- Icon -->
+          <div class="text-5xl mb-4">📦</div>
+
+          <!-- Title -->
+          <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition">
+            {{ project.title }}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-gray-700 mb-6 leading-relaxed flex-grow">
+            {{ project.description }}
+          </p>
+
+          <!-- Achievements -->
+          <div class="mb-6">
+            <h4 class="text-sm font-bold text-gray-900 uppercase mb-3 text-gray-600">Resultados:</h4>
+            <ul class="space-y-2">
+              <li *ngFor="let achievement of project.achievements | slice:0:3" class="flex gap-2 text-gray-700 text-sm">
+                <span class="text-primary-600">▸</span>
+                <span>{{ achievement }}</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Technologies -->
+          <div class="mb-6 pb-6 border-b border-gray-200">
+            <div class="flex flex-wrap gap-2">
+              <span *ngFor="let tech of project.technologies" 
+                    class="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold rounded-full">
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div class="flex gap-3 pt-4">
+            <a *ngIf="project.link" [href]="project.link" target="_blank" rel="noopener"
+               class="flex-1 px-4 py-2 bg-primary-600 text-white text-sm font-semibold rounded-lg hover:bg-primary-700 transition text-center">
+              Ver Projeto
+            </a>
+            <a *ngIf="project.github" [href]="project.github" target="_blank" rel="noopener"
+               class="flex-1 px-4 py-2 bg-gray-800 text-white text-sm font-semibold rounded-lg hover:bg-gray-900 transition text-center">
+              GitHub
+            </a>
+            <button class="px-4 py-2 bg-gray-100 text-gray-700 text-sm font-semibold rounded-lg hover:bg-gray-200 transition">
+              📖
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-16 text-center">
+      <p class="text-gray-700 mb-6 text-lg">Quer ver mais projetos?</p>
+      <a href="https://github.com/OtavioValadao" target="_blank" rel="noopener"
+         class="inline-block px-8 py-4 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-all duration-300 transform hover:scale-105">
+        Visite meu GitHub →
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,45 @@
+<footer class="bg-gray-900 dark:bg-black text-gray-400 dark:text-gray-500 py-12 border-t border-gray-800 dark:border-gray-700 transition-colors duration-300">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <!-- Coluna 1: Info -->
+      <div>
+        <h3 class="text-white font-bold mb-4">Otávio Valadão</h3>
+        <p class="text-sm">Engenheiro de Backend especializado em fintech e arquitetura em nuvem.</p>
+      </div>
+
+      <!-- Coluna 2: Links Rápidos -->
+      <div>
+        <h4 class="text-white font-bold mb-4">Links Rápidos</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#projects" class="hover:text-white transition">Projetos</a></li>
+          <li><a href="#skills" class="hover:text-white transition">Habilidades</a></li>
+          <li><a href="#experience" class="hover:text-white transition">Experiência</a></li>
+          <li><a href="#contact" class="hover:text-white transition">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3: Social -->
+      <div>
+        <h4 class="text-white font-bold mb-4">Redes Sociais</h4>
+        <div class="flex gap-4">
+          <a *ngFor="let link of socialLinks" 
+             [href]="link.url" 
+             target="_blank" 
+             rel="noopener"
+             class="text-lg hover:text-primary-400 transition"
+             [title]="link.label">
+            <i [class]="'bi ' + link.icon"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-gray-800 pt-8">
+      <div class="text-center text-sm">
+        <p>&copy; {{ currentYear }} Otávio Valadão. Todos os direitos reservados.</p>
+        <p class="mt-2">Desenvolvido com <span class="text-red-500">❤️</span> e Angular</p>
+      </div>
+    </div>
+  </div>
+</footer>
