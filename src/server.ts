@@ -1,8 +1,23 @@
-import { AngularNodeAppEngine } from '@angular/ssr/node';
-// @ts-ignore
-import { createRequestHandler, getContext } from '@netlify/angular-runtime';
+import { AngularAppEngine, createRequestHandler } from '@angular/ssr'
+import { getContext } from '@netlify/angular-runtime/context.mjs'
 
-const engine = new AngularNodeAppEngine();
+const angularAppEngine = new AngularAppEngine()
 
-// Exporta o handler compatível com Netlify Functions
-export const handler = createRequestHandler(engine, getContext());
+export async function netlifyAppEngineHandler(request: Request): Promise<Response> {
+  const context = getContext()
+
+  // Example API endpoints can be defined here.
+  // Uncomment and define endpoints as necessary.
+  // const pathname = new URL(request.url).pathname;
+  // if (pathname === '/api/hello') {
+  //   return Response.json({ message: 'Hello from the API' });
+  // }
+
+  const result = await angularAppEngine.handle(request, context)
+  return result || new Response('Not found', { status: 404 })
+}
+
+/**
+ * The request handler used by the Angular CLI (dev-server and during build).
+ */
+export const reqHandler = createRequestHandler(netlifyAppEngineHandler)
