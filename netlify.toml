@@ -1,11 +1,9 @@
 [build]
-command = "npm run build"
+command = "npm run build -- --configuration production --no-ssr"
 publish = "dist/portfolio-otavio/browser"
-functions = "dist/portfolio-otavio/server"
 
 [build.environment]
 NODE_VERSION = "20"
-NPM_VERSION = "10"
 
 [[redirects]]
 from = "/*"
