@@ -17,16 +17,20 @@
         <div class="space-y-4">
           <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Minha Jornada</h3>
           <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-            Com 6 anos de experiência, comecei como estagiário na Engineering Brasil em 2021, aprendendo os fundamentos de Java e desenvolvimento de software. Evoluí para Software Engineer, e atualmente na DTI Digital, lidero soluções inovadoras para fintech com arquitetura em nuvem.
+            Com 6 anos de experiência, comecei como estagiário na Engineering Brasil em 2021, aprendendo os fundamentos
+            de Java e desenvolvimento de software. Evoluí para Software Engineer, e atualmente na DTI Digital, lidero
+            soluções inovadoras para fintech com arquitetura em nuvem.
           </p>
           <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-            Meu foco é desenvolver sistemas robustos, escaláveis e eficientes. Além do código, valorizo mentoria, excelência técnica e a formação de equipes de alta performance.
+            Meu foco é desenvolver sistemas robustos, escaláveis e eficientes. Além do código, valorizo mentoria,
+            excelência técnica e a formação de equipes de alta performance.
           </p>
         </div>
 
         <!-- CTA -->
         <div class="pt-4">
-          <a href="#contact" class="inline-block px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <a href="#contact"
+            class="inline-block px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
             Vamos trabalhar juntos →
           </a>
         </div>
@@ -36,7 +40,8 @@
       <div class="space-y-8" data-aos="fade-left" data-aos-delay="100">
 
         <!-- Estatísticas -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 transition-colors duration-300">
+        <div
+          class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 transition-colors duration-300">
           <div class="space-y-6">
             <div class="border-b border-gray-200 dark:border-gray-700 pb-6">
               <h4 class="text-sm font-semibold text-primary-600 uppercase mb-2">Experiência Total</h4>
@@ -59,13 +64,14 @@
         </div>
 
         <!-- Formação com destaque para Pós-graduação -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 transition-colors duration-300">
+        <div
+          class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 transition-colors duration-300">
           <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-6">📚 Formação</h4>
-          
+
           <div class="space-y-4">
             <!-- Pós-graduação em destaque -->
-            <div *ngFor="let edu of education | slice:0:1" 
-                 class="relative bg-gradient-to-r from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/30 border-2 border-primary-400 dark:border-primary-600 rounded-lg p-4 transform hover:scale-105 transition-transform duration-300">
+            <div *ngFor="let edu of education | slice:0:1"
+              class="relative bg-gradient-to-r from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/30 border-2 border-primary-400 dark:border-primary-600 rounded-lg p-4 transform hover:scale-105 transition-transform duration-300">
               <div class="flex items-start gap-3">
                 <span class="text-2xl">🎓</span>
                 <div class="flex-1">
@@ -83,7 +89,8 @@
             </div>
 
             <!-- Outras formações -->
-            <div *ngFor="let edu of education | slice:1" class="flex gap-3 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+            <div *ngFor="let edu of education | slice:1"
+              class="flex gap-3 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
               <span class="text-2xl">{{ edu.type === 'graduation' ? '🎓' : '📜' }}</span>
               <div class="flex-1">
                 <p class="font-semibold text-gray-900 dark:text-white">{{ edu.course }}</p>

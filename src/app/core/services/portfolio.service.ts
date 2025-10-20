@@ -8,9 +8,9 @@ export class PortfolioService {
 
   private profileInfo: ProfileInfo = {
     name: 'Otávio Valadão',
-    title: 'Software Engineer',
-    headline: 'Engenheiro de Backend | Especialista em Fintech & Arquitetura em Nuvem',
-    bio: 'Engenheiro de Backend especializado em soluções fintech escaláveis, desenvolvendo sistemas robustos em Java e arquiteturas nativas em nuvem. Expertise em Spring Boot e AWS acompanhada pelo compromisso com excelência técnica e mentoria. Prospero em ambientes colaborativos resolvendo desafios complexos.',
+    title: 'Software Architect',
+    headline: 'Software Architect | Backend Engineer',
+    bio: 'Construo sistemas fintech robustos e escaláveis com Java, Spring Boot e AWS. Expertise em microsserviços, idempotência distribuída e observabilidade. Commitment com excelência técnica e desenvolvimento de pessoas.',
     email: 'otavionunesvaladao@gmail.com',
     phone: '+55 31 99886-6134'
   };
